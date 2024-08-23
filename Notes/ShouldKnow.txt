@@ -1,0 +1,32 @@
+# Authentication Provider
+-> An Authentication Provider is a service that verifies the identity of users trying to access a system. It checks user credentials (like username and password) and ensures they are correct. If the credentials are valid, the user is granted access; otherwise, access is denied. It also manages user accounts and enforces security policies.
+
+=> Key Responsibilities of an Authentication Provider:
+1. User Authentication: Verifying the identity of users.
+2. Create Authentication Tokens: Generating tokens for authenticated users.
+
+=> Authentication Providers Types:
+1. DaoAuthenticationProvider
+2. InMemoryAuthenticationProvider
+3. LdapAuthenticationProvider
+4. ActiveDirectoryLdapAuthenticationProvider
+5. PreAuthenticatedAuthenticationProvider
+6. OAuth2AuthenticationProvider
+
+# UserDetails
+-> In Spring Security, UserDetails is an interface that provides core user information. It is used to store user information which is later encapsulated into Authentication objects.
+
+• String getUsername(): Returns the username used to authenticate the user.
+• String getPassword(): Returns the password used to authenticate the user.
+• Collection<? extends GrantedAuthority> getAuthorities(): Returns the authorities granted to the user.
+• boolean isAccountNonExpired(): Indicates whether the user's account has expired.
+• boolean isAccountNonLocked(): Indicates whether the user is locked or unlocked.
+• boolean isCredentialsNonExpired(): Indicates whether the user's credentials (password) have expired.
+• boolean isEnabled(): Indicates whether the user is enabled or disabled.
+
+# User
+->In Spring Security, the User class is a concrete implementation of the UserDetails interface. It represents a user in the system and provides the necessary information for authentication and authorization.
+-> Key Features of User Class:
+Username and Password: Stores the username and password of the user.
+Authorities: Stores the roles or authorities granted to the user.
+Account Status: Provides information about whether the account is expired, locked, or enabled.

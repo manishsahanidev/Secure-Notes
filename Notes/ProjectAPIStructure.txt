@@ -1,0 +1,7 @@
+HTTP Method | Endpoint           | Description                               | Request Body            | Response
+------------|--------------------|-------------------------------------------|-------------------------|----------------------
+POST        | /api/notes         | Create a new note                         | String                  | Note (created)
+GET         | /api/notes         | Retrieve all notes for the logged-in user | None                    | List<Note> (user's notes)
+GET         | /api/notes/{id}    | Retrieve content of a specific note       | None                    | Note
+PUT         | /api/notes/{id}    | Update an existing note                   | update content String   | Note (updated note)
+DELETE      | /api/notes/{id}    | Delete a specific note                    | None                    | void

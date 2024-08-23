@@ -1,0 +1,16 @@
+1. UsernamePasswordAuthenticationFilter
+-> Processes authentication requests with username and password.
+   Intercepts requests to /login.
+
+2. BasicAuthenticationFilter
+-> Processes HTTP Basic authentication for a request.
+   Intercepts requests to /login with a Basic header.
+
+3. BearerTokenAuthenticationFilter
+-> Processes requests with a Bearer token.
+   Intercepts requests to /login with a Bearer token.
+   Used in OAuth2 and JWT-based systems.
+
+4. SecurityContextPersistenceFilter
+-> Manages SecurityContext between requests.
+   Loads and stores SecurityContext from/to the session.
